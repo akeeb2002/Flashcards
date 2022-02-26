@@ -3,12 +3,11 @@
 ## Lab 1
 
 ### App Description
-An App similar to a Flashcard that shows the answer to a question when you click on the screen of the phone.
+An App that acts similar to a Flashcard where it shows the answer to a question after you tap on the screen.
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
+![lab 1](https://user-images.githubusercontent.com/90944924/155858987-77078b22-2528-4f18-a01b-96bf0c3df4c3.gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
 
 
 ## Required
