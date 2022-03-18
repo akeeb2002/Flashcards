@@ -3,7 +3,7 @@
 ## Lab 2
 
 ### App Description
-`TODO://` Add app description
+Simple Flashcards app where the user can enter a question and answer after opening a screen
 
 ### App Walk-though
 ![lab 2 ](https://user-images.githubusercontent.com/90944924/159084241-7a5fbbee-3e4e-4ee4-84a2-129b5bc569b0.gif)
