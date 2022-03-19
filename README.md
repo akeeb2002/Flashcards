@@ -6,7 +6,7 @@
 Simple Flashcards app where the user can open up a screen to put a question and answer.
 
 ### App Walk-through
-![lab 2 ](https://user-images.githubusercontent.com/90944924/159084241-7a5fbbee-3e4e-4ee4-84a2-129b5bc569b0.gif)
+![labbbb](https://user-images.githubusercontent.com/90944924/159131466-88bc33a4-3fca-4e88-8dc0-b121d1b10c1a.gif)
 
 
 
