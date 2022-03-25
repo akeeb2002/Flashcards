@@ -6,9 +6,10 @@
 Simple Flashcard app
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+![lab 3](https://user-images.githubusercontent.com/90944924/160197351-e6c1c05a-5535-40a6-a7a0-66e01196572c.gif)
+
+
 
 
 ## Required
