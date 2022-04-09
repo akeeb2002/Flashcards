@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var FrontLabel: UILabel!
     @IBOutlet weak var BackLabel: UILabel!
+    @IBOutlet weak var Card: UIView!
     
     
     @IBOutlet weak var prevButton: UIButton!
@@ -40,8 +41,53 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        FrontLabel.isHidden = !FrontLabel.isHidden
+        flipFlashcard()
     }
+    
+    func flipFlashcard(){
+        UIView.transition(with: Card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if(self.FrontLabel.isHidden) {
+                self.FrontLabel.isHidden = false
+            }
+            else {
+                self.FrontLabel.isHidden = true
+            }
+        })
+    }
+
+    
+    func animateCardOut(buttonType: Int) {
+        UIView.animate(withDuration: 0.3, animations: {
+            if (buttonType == 1){
+                 self.Card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+            } else {
+                 self.Card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            }
+        }, completion: { finished in
+            
+            // Update labels
+            self.updateLabels()
+            
+            // Run other animation
+            self.animateCardIn(buttonType: buttonType)
+        })
+    }
+    
+    func animateCardIn(buttonType: Int) {
+        
+        // Start on the right side (don't animate this)
+        if (buttonType == 1){
+            self.Card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        } else {
+            self.Card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }
+        
+        // Animate card going back to its original position
+        UIView.animate(withDuration: 0.3) {
+            self.Card.transform = CGAffineTransform.identity
+        }
+    }
+
     
     func updateFlashcard(question: String, answer: String) {
         let flashcard = Flashcard(question: question, answer: answer)
@@ -63,12 +109,14 @@ class ViewController: UIViewController {
         currentIndex = currentIndex - 1
         updateLabels()
         updateNextPrevButtons()
+        animateCardOut(buttonType: 2)
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
         currentIndex = currentIndex + 1
         updateLabels()
         updateNextPrevButtons()
+        animateCardOut(buttonType: 1)
     }
     
     
